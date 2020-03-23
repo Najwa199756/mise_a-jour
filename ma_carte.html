@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>OpenStreetMap</title>
-        <!-- utilisation des liens CDN de Leaflet-->
+        <!-- les liens CDN de Leaflet-->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" 
               integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" 
               crossorigin=""/>
@@ -19,18 +19,18 @@
                  crossorigin=""></script>
          <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
-        <!-- lien vers mon fichier css-->
+        <!-- le lien vers mon fichier css-->
         <link rel="stylesheet" href="style/style.css" />
 
     </head>
     <body onload="initialize()">
-        <!-- lDIV qui contient la carte-->
+        <!-- id de la carte-->
         <div id="maCarte"></div>
             
-        <!--fichier javascript externe qui paramètre le contenu de la carte Leaflet -->
+        <!--fichier js pour le paramètrage de la cartel(Leaflet) -->
         <script src="mesFonctions.js"></script>
 
-        <!-- lDIV qui contient la carte-->
+        <!-- coordonnees des GAB (fichier Json ) -->
         <script type='text/javascript' src='GAB.json'></script>
     </body></html>
     

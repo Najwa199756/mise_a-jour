@@ -5,13 +5,6 @@
     {
         console.log('page chargée');
 
-    var villes = {
-      
-        "Dakhla"   :{"lat": 23.6847700     ,  "lon": -15.9579800},
-        "Casablanca":{"lat": 33.5883100   ,  "lon": -7.6113800},
-        "Marrakech" :{"lat": 31.6341600   ,  "lon": -7.9999400}
-                 };
-
    var tableauMarqueurs = [];
 
     // On initialise la carte 7.988776
@@ -43,12 +36,7 @@
 
    var marqueurs = L.markerClusterGroup();
 
-    // On parcourt les différentes villes
-    ////for(ville in villes){
-        // On crée le marqueur et on lui attribue une popup
-    ////    var marqueur = L.marker([villes[ville].lat, villes[ville].lon], {icon: icone}).addTo(carte); //Inutile lors de l'utilisation des clusters
-    ////    marqueur.bindPopup("<p>"+ville+"</p>");
-    ////    marqueurs.addLayer(marqueur); // On ajoute le marqueur au groupe
+
    for ( var i=0;i< markers.length; ++i )
    {
      var marqueur=L.marker([markers[i].latitude , markers[i].longitude], {icon: icone}).bindPopup("<p>"+markers[i].name+"</p>").addTo(carte);
@@ -64,18 +52,7 @@
        carte.fitBounds(groupe.getBounds().pad(0.5));
 
        carte.addLayer(marqueurs);
-       /*week1_works 
-         mes commentaires :j'ai vue un peu comment creer  manuellement une carte sur la plateforme OpenStreetMap histoire de decouvrire ce qu'une
-            carte propose , ainsi que ses principaux elements {marqueur et Popup , markerCluster }.Ensuite j'ai essayer de la programmer en utilisant
-            la librairie leaflet en javascript   , et voila c qui m'a donnee:
-            ...) au debut j'ai commencee avec l'insertion des markeur a partir d'un tableau qui contient les cordonnes , maintenant j'essaye d'inserer
-            des marqueurs a partir d'une base de donnes  (dc je suis en train de travailler sur les fichiers php qui permettent d'extraire les infos
-            du base de donnees) */
-
-       
-
-            
-
+      
             
     }
     

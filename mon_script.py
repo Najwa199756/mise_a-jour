@@ -1,13 +1,12 @@
 ##### mon script : csv To json 
-#!/usr/bin/python
 import csv , json   
 
-csvFilePath = "liste-coordonnees-gps-des-monuments.csv"
-jsonFilePath = "file.json"
+fichierCSV_chemin = "liste-coordonnees-gps-des-monuments.csv"
+fichierJSON_chemin = "file.json"
 arr = []
-#read the csv and add the arr to a arrayn
 
-with open (csvFilePath,encoding = "ISO-8859-1") as csvFile:
+
+with open (fichierCSV_chemin,encoding = "ISO-8859-1") as csvFile:
     csvReader = csv.DictReader(csvFile)
     print(csvReader)
     for csvRow in csvReader:
@@ -15,7 +14,6 @@ with open (csvFilePath,encoding = "ISO-8859-1") as csvFile:
 
 print()
 
-# write the data to a json file
-with open(jsonFilePath, "w") as jsonFile:
+with open(fichierJSON_chemin, "w") as jsonFile:
     jsonFile.write(json.dumps(arr, indent = 4))
 # file.json
